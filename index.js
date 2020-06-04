@@ -1,7 +1,7 @@
 console.log("loaded");
 
 let state = {
-  orignaltodos: [],
+  orignalTodos: [],
   toDo: [],
   titlesort: false,
 }
@@ -38,6 +38,16 @@ function filterComplete() {
   const toDoComplete= toDo.map(item => item === true)
   state.toDo = toDoComplete
   renderToDo();
+}
+
+function reset() {
+  const { orignalTodos } = state;
+  state.toDo = [...orignalTodos];
+  render();
+}
+
+function sortByTitle() {
+  const { }
 }
 
 
